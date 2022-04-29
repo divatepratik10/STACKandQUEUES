@@ -31,15 +31,46 @@ namespace StacksandQueues
 
             Console.WriteLine("{0} is Pushed into the STACK.", Val);
         }
-
+        
+        //POP
+        public void Pop()
+        {
+            if(this.top == null)
+            {
+                Console.WriteLine("Stack is EMPTY.\nDeletation is not Possible.");
+                return;
+            }
+            Console.WriteLine("Pooped Value : {0}", this.top.data);
+            this.top = this.top.next;
+        }
+        //PEEK
+        public void Peek()
+        {
+            if(this.top == null)
+            {
+                Console.WriteLine("Stack is EMPTY.");
+            }
+            Console.WriteLine("{0} is at the top of Stack.",this.top.data);
+        }
+        //EMPTY
+        public void Empty()
+        {
+            while(this.top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
+        //DISPLAY
         public void Display()
         {
             Node temp = this.top;
-            while(temp != null)
+            while (temp != null)
             {
-                Console.WriteLine("Stack Data : " +temp.data);
+                Console.WriteLine("Stack Data : " + temp.data);
                 temp = temp.next;
             }
         }
+
     }
 }

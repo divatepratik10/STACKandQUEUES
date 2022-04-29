@@ -18,6 +18,11 @@ namespace StacksandQueues
             Console.WriteLine("\nFinal Stack list is : ");
             linkedListSTACK.Display();
 
+            linkedListSTACK.Peek();
+            Console.WriteLine("\n");
+            linkedListSTACK.Pop();
+            linkedListSTACK.Empty();
+
             Console.ReadLine();
         }
     }
