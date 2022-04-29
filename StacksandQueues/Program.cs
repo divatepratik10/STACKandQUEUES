@@ -31,10 +31,13 @@ namespace StacksandQueues
 
                 case 2:
                     LinkedListQUEUE linkedListQUEUE = new LinkedListQUEUE();
-                    linkedListQUEUE.Enqueue(70);
-                    linkedListQUEUE.Enqueue(30);
                     linkedListQUEUE.Enqueue(56);
-                    Console.WriteLine("Final Queue list is : ");
+                    linkedListQUEUE.Enqueue(30);
+                    linkedListQUEUE.Enqueue(70);
+                    Console.WriteLine("Queue list is : ");
+                    linkedListQUEUE.DisplayQ();
+                    linkedListQUEUE.Dequeue();
+                    Console.WriteLine("\nFinal Queue list after Deletion is : ");
                     linkedListQUEUE.DisplayQ();
                     break;
             }
